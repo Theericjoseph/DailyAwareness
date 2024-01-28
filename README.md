@@ -43,11 +43,15 @@ These instructions will help you set up and run the DailyAwareness project on yo
 
    ```bash
    cp .env.example .env
-6. Run database migrations:
+6. Generate the application key:
+   
+   ```bash
+   php artisan key:generate
+7. Run database migrations:
 
    ```bash
    php artisan migrate
-7. Start the Laravel development server:
+8. Start the Laravel development server:
 
     ```bash
     php artisan serve
