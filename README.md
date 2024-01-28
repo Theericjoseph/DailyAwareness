@@ -55,7 +55,11 @@ These instructions will help you set up and run the DailyAwareness project on yo
 
     ```bash
     php artisan serve
-    
+9. Compile assets with Laravel Mix:
+
+    ```bash
+    npm run dev
+    ```
 The application will be available at http://127.0.0.1:8000/home.
 
 ### Usage
