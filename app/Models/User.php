@@ -3,10 +3,14 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Carbon\Carbon;
+use App\Models\Entry;
+use App\Models\Metric;
+use Laravel\Sanctum\HasApiTokens;
+use App\Notifications\DailyNotification;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
@@ -21,6 +25,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'username',
     ];
 
     /**
@@ -42,4 +47,19 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function hasEntryForToday()
+    {
+        return $this->entries()->whereDate('created_at', Carbon::today())->exists();
+    }
+
+    public function metrics()
+    {
+        return $this->hasMany(Metric::class, 'created_by');
+    }
+
+    public function entries()
+    {
+        return $this->hasMany(Entry::class);
+    }
 }
