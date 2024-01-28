@@ -28,4 +28,37 @@ These instructions will help you set up and run the DailyAwareness project on yo
 
     ```bash
    git clone https://github.com/Theericjoseph/DailyAwareness.git
+2. Change into project directory
+   
+   ```bash
+   cd DailyAwareness
+3. Install PHP dependencies:
+
+   ```bash
+   composer install
+4. Install NPM dependencies:
+
+   ```bash
+   npm install
+5. Copy the .env.example file to .env and configure your database settings.
+
+   ```bash
+   cp .env.example .env
+6. Run database migrations:
+
+   ```bash
+   php artisan migrate
+7. Start the Laravel development server:
+
+    ```bash
+    php artisan serve
+    
+The application will be available at http://127.0.0.1:8000/home.
+
+### Usage
+* Open your web browser and navigate to http://127.0.0.1:8000/home.
+* Create an account or log in if you already have one.
+* Use the simple interface to make daily awareness entries. (Users can add their own metrics to track).
+* View your entries under the history tab
+  
 
