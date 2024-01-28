@@ -6,7 +6,6 @@ DailyAwareness is a minimalist web application designed to help users track thei
 
 ## Features
 * User Authentication: Secure user authentication system to ensure privacy.
-* Daily Notifications: Automated notifications to remind users to make an entry for the day.
 * Metrics Tracking: Record your daily awareness levels using customizable metrics.
 * Effortless UI: Simple and intuitive user interface for a seamless experience.
 
