@@ -67,5 +67,32 @@ The application will be available at http://127.0.0.1:8000/home.
 * Create an account or log in if you already have one.
 * Use the simple interface to make daily awareness entries. (Users can add their own metrics to track).
 * View your entries under the history tab
-  
+
+### Running the seeder
+```bash
+php artisan db:seed
+php artisan db:seed --class=MetricSeeder
+php artisan db:seed --class=EntrySeeder
+```
+### Entering Seeded Data
+
+If you've run the database seeders to populate your application with test data, here's how you can access seeded accounts and view pre-filled entries.
+
+### Seeded User Accounts
+
+For testing purposes, the application includes seeded user accounts. You can use the following credentials to log in:
+
+1. **User 1**
+    - Email: user1@example.com
+    - Password: password
+
+2. **User 2**
+    - Email: user2@example.com
+    - Password: password
+
+3. **User 3**
+    - Email: user3@example.com
+    - Password: password
+
+The seeded data can be viewed under the history tab on the date 28-01-2024
 
